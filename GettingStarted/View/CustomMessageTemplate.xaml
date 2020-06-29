@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+          mc:Ignorable="d"
+             x:Class="GettingStarted.CustomMessageTemplate" >
+    <ViewCell.View >
+        <StackLayout Spacing="4"   WidthRequest="200"  HorizontalOptions="CenterAndExpand" Padding="4,30,4,30">
+            <border:SfBorder CornerRadius="6" BorderColor="LightGray">
+                <Grid  BackgroundColor="#fef4c5" Padding="15,0,0,0">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="7"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Grid.Column="0" Source="Lock.png" BackgroundColor="Transparent" HeightRequest="7" WidthRequest="7"/>
+                    <Label Grid.Row="0" Grid.Column="1"
+                        HorizontalOptions="Start"
+                        Text="{Binding Text}"
+                        LineBreakMode="NoWrap"
+                        TextColor="#212121"
+                        FontSize="8"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+            </border:SfBorder>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>
